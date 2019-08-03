@@ -1,0 +1,23 @@
+{
+  "name": "spinelhouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mysql": "^2.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
