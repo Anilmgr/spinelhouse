@@ -1,0 +1,39 @@
+//- Main Content
+div#login-page
+    div(class='container')
+        form(class="form-login", ,method="post", action="/register")
+            h2(class="form-login-heading") Register Now
+            div(class="login-wrap")
+                input(type="text", class="form-control", placeholder="User ID", name="userid", autofocus)
+                br
+                input(type="text", class="form-control", placeholder="Full Name", name="fullname", autofocus)
+                br    
+                input(type="email", class="form-control", placeholder="Email", name="email")
+                br
+                input(type="password", class="form-control", placeholder="Password" name="password")
+                br
+                input(type="password", class="form-control", placeholder="Confirm Password" name="confirm-password")
+                br
+                button(class="btn btn-theme btn-block", type="submit")
+                    i(class="fa fa-lock") &nbsp; REGISTER
+                hr
+                div(class="login-social-link centered")
+                    p OR <br> you can sign in via your social network
+                    button(class="btn btn-facebook", type="submit")
+                        i(class="fa fa-facebook") 
+                        | &nbsp; Facebook
+                    | &nbsp;    
+                    button(class="btn btn-twitter", type="submit") 
+                        i(class="fa fa-twitter")
+                        | &nbsp; Twitter
+
+//-   !-- js placed at the end of the document so the pages load faster --
+script(src="jquery/jquery.min.js")
+script(src="bootstrap/js/bootstrap.min.js")
+//-   !--BACKSTRETCH--
+//-   !-- You can use an image of whatever size. This script will stretch to fit in any screen size.--
+script(type="text/javascript" src="jquery.backstretch.min.js")
+script.
+    $.backstretch("img/login-bg.jpg", {
+    speed: 500
+    });
