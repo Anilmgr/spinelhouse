@@ -4,16 +4,19 @@ div#login-page
         form(class="form-login", method="post" action="/login")
             h2(class="form-login-heading") sign in now
             div(class="login-wrap")
-                input(type="text", class="form-control", placeholder="User ID", name="userid", autofocus)
+                input(type="text", class="form-control", placeholder="Username", name="userid", autofocus, required)
                 br
-                input(type="password", class="form-control", placeholder="Password", name="password")
+                input(type="password", class="form-control", placeholder="Password", name="password", required)
                 label(class=" remem checkbox")
                     input(type="checkbox", value="remember-me")
                     | Remember me
                     span(class="pull-right")
                         a(data-toggle="modal", href="javascript:;") Forgot Password?
                 button(class="btn btn-theme btn-block", type="submit")
-                    i(class="fa fa-lock") &nbsp; SIGN IN
+                    i(class="fa fa-lock") &nbsp; SIGN 
+                if message
+                    br    
+                    div(class="alert alert-danger text-center")= message
                 hr
                 div(class="login-social-link centered")
                     p OR <br> you can sign in via your social network

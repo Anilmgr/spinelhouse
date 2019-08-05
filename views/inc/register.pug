@@ -1,18 +1,22 @@
 //- Main Content
 div#login-page
     div(class='container')
-        form(class="form-login", ,method="post", action="/register")
+        form(class="form-login form-signup", ,method="post", action="/register")
             h2(class="form-login-heading") Register Now
+            if message
+                    br    
+                    div(class="alert alert-success text-center")= message
+                    a(href="/") Login
             div(class="login-wrap")
-                input(type="text", class="form-control", placeholder="User ID", name="userid", autofocus)
+                input(type="text", class="form-control", placeholder="User ID", name="userid", autofocus, required)
                 br
-                input(type="text", class="form-control", placeholder="Full Name", name="fullname", autofocus)
+                input(type="text", class="form-control", placeholder="Full Name", name="fullname", autofocus, required)
                 br    
-                input(type="email", class="form-control", placeholder="Email", name="email")
+                input(type="email", class="form-control", placeholder="Email", name="email", required)
                 br
-                input(type="password", class="form-control", placeholder="Password" name="password")
+                input(type="password", class="form-control", placeholder="Password" name="password", required)
                 br
-                input(type="password", class="form-control", placeholder="Confirm Password" name="confirm-password")
+                input(type="password", class="form-control", placeholder="Confirm Password" name="confirm-password", required)
                 br
                 button(class="btn btn-theme btn-block", type="submit")
                     i(class="fa fa-lock") &nbsp; REGISTER
@@ -26,7 +30,10 @@ div#login-page
                     button(class="btn btn-twitter", type="submit") 
                         i(class="fa fa-twitter")
                         | &nbsp; Twitter
-
+                div(class="registration")
+                    | Already have an account?
+                    br
+                    a(class="", href="/")  Login
 //-   !-- js placed at the end of the document so the pages load faster --
 script(src="jquery/jquery.min.js")
 script(src="bootstrap/js/bootstrap.min.js")

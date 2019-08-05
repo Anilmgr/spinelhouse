@@ -23,7 +23,7 @@ router.post('/login', function(req, res, next) {
 			res.redirect('/dashboard');	
 
 		} else {
-			res.send('Username/Password incorrect')
+			res.render('index', {message: 'Incorrect Username/Password.'});
 		}
 	})
 });
@@ -39,10 +39,8 @@ router.post('/register', function(req, res, next){
 	user.create(userInput, function(lastId){
 		if(lastId){
 			user.find(lastId, function(result){
-				req.session.user = result;
-				req.session.opp = 0;
-				res.redirect('home');
-			}); }
+				req.session.opp = 0;	
+				res.render('signup', {message: 'Successfully registered!!'});			}); }
 		else {
 			console.log('Error in creating user');
 		}
