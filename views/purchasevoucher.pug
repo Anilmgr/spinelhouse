@@ -1,0 +1,151 @@
+include inc/header
+include inc/sidebar
+
+section#main-content
+    section.wrapper
+        h3
+            i(class="fa fa-shopping-cart")
+            |   PURCHASES
+        .row.mt
+            .col-lg-12
+                .form-panel
+                    h4.mb
+                        i(class="fa fa-plus-square") 
+                        | &nbsp; Create Voucher    
+                    form(role="form" action="/purchases/add_party" method="POST")
+                        .col-lg-8
+                            div(class="form-group col-xs-12 col-sm-6 col-md-8 col-lg-8")
+                                label Purchase Ledger Name :
+                                select(id="partyname" name="party" class="form-control")
+                                    option(value="") Party's Name
+                                    option(value="Afghanistan") Afghanistan
+                                    option(value="Åland Islands") Åland Islands
+                                    option(value="Albania") Albania
+                                    option(value="Algeria") Algeria
+                            div(class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4")
+                                label Date :
+                                //- div(data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="01-01-2014" class="input-append date dpYears")
+                                //-     input(type="text" readonly="" value="01-01-2014" size="16" class="form-control")
+                                //-     span(class="input-group-btn add-on")
+                                //-         button(class="btn btn-theme" type="button")
+                                //-             i(class="fa fa-calendar")
+                                
+                                input(class="form-control" type="date" value="")
+                            .clearfix
+                            div(class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6")
+                                label Invoice Number :
+                                input.form-control(type="text" name="address1" placeholder="Invoice Number" required)
+                            div(class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6")
+                                label Voucher Number :
+                                input.form-control(type="text" name="address2"  value="PV46" disabled) 
+                            .clearfix
+                            div(class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12")
+                                label Narration :
+                                .form-group
+                                    textarea.ta-group(name="address2" rows="5") 
+                            .clearfix
+                        .col-lg-4
+                            div(class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 last")
+                                label.upload-img Upload Purchase Invoice :
+                                .col-md-12
+                                    div(class="fileupload fileupload-new" data-provides="fileupload")
+                                        div(class="fileupload-new thumbnail" style="width: 200px; height: 200px;")
+                                            img(src="../img/no-image.png" alt="")
+                                        div(class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;")
+                                        div
+                                            span(class="btn btn-theme02 btn-file bttn")
+                                                span(class="fileupload-new")
+                                                    i(class="fa fa-paperclip") 
+                                                    |  Select image
+                                                span(class="fileupload-exists")
+                                                    i(class="fa fa-undo")
+                                                    |  Change
+                                                input(type="file" class="default")
+                                            a(href="purchasevoucher#" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload" aria-hidden="true")
+                                                i(class="fa fa-trash-o")
+                                                | Remove
+                            .clearfix
+                        .clearfix
+                    .table-responsive  
+                        table.table.table-bordered
+                            thead
+                                tr
+                                    th Item Group
+                                    th Item Number
+                                    th Item Name
+                                    th(colspan="2") Quantity
+                                    th Pcs/Parcel
+                                    th Dimension
+                                    th Unit Price
+                                    th Shape
+                                    th Color
+                                    th Origin
+                                    th Certification
+                            tbody      
+                                    tr 
+                                        form(method="POST")
+                                            td
+                                                select.form-control.tab_td(id="item_group" name="item_group" value="item-groupall")
+                                                    option(value="item-groupall") All
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3
+                                            td
+                                                input.form-control.tab_td(type="text")
+                                            td
+                                                input.form-control.tab_td(type="text")
+                                            td
+                                                input.form-control.tab_td(type="text")
+                                            td
+                                                select.form-control.tab_td(id="unit" name="unit" value="unit")
+                                                    option(value="item-groupall") Unit
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3
+                                            td
+                                                input.form-control.tab_td(type="text")    
+                                            td
+                                                input.form-control.tab_td(type="text")
+                                            td
+                                                input.form-control.tab_td(type="text")
+                                            td
+                                                select.form-control.tab_td(id="item_group" name="item_group" value="item-groupall")
+                                                    option(value="item-groupall") All
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3
+                                            td
+                                                select.form-control.tab_td(id="item_group" name="item_group" value="item-groupall")
+                                                    option(value="item-groupall") All
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3        
+                                            td
+                                                select.form-control.tab_td(id="item_group" name="item_group" value="item-groupall")
+                                                    option(value="item-groupall") All
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3  
+                                            td
+                                                select.form-control.tab_td(id="item_group" name="item_group" value="item-groupall")
+                                                    option(value="item-groupall") All
+                                                    option(value="item-group1") Group1
+                                                    option(value="item-group2") Group2
+                                                    option(value="item-group3") Group3s                                
+                    .col-lg-12
+                        a(href="/purchases" class="btn btn-success btn-md bttn") 
+                                i(class="fa fa-plus")
+                                |  Add row 
+                        a(href="/purchases" class="btn btn-danger btn-md") 
+                                i(class="fa fa-minus")
+                                |  delete row           
+                    .pull-right
+                        table.table.table-bordered
+                            td.tab-bg Grand Total : 
+                            td.tab_td.text-right $0/-                     
+                    .clearfix              
+
+
+    include inc/footer
+include inc/scripts
+

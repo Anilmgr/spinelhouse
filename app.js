@@ -31,7 +31,7 @@ app.use('/', pageRouter);
 app.use((req, res, next) =>  {
     var err = new Error('Page not found');
     err.status = 404;
-    next(err);
+    next(res.render('404'));
 });                      
 
 // Handling errors (send them to the client)

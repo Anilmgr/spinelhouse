@@ -1,0 +1,55 @@
+include inc/header
+include inc/sidebar
+
+section#main-content
+    section.wrapper
+        h3
+            i(class="fa fa-shopping-cart")
+            |   PURCHASES
+        .row.mt
+            .col-lg-12.col-xs-12
+                .form-panel
+                    .table-responsive
+                        h4.mb
+                            i(class="fa fa-list") 
+                            | &nbsp; Purchase Ledgers List
+                            .pull-right
+                                a(href="/purchases" class="btn btn-danger btn-md") 
+                                        i(class="fa fa-plus")
+                                        |  Create Purchase Ledger     
+                        table.table.table-bordered
+                            thead
+                                tr
+                                    th Party Name
+                                    th Phone Number
+                                    th Address Line 1
+                                    th Address Line 2
+                                    th City
+                                    th State
+                                    th Country
+                                    th Postal Code
+                                    th Tax id
+                                    th Document
+                                    th Action
+                            tbody  
+                                each field in fields      
+                                    tr 
+                                        td= field.name
+                                        td= field.phone
+                                        td= field.address1
+                                        td= field.address2
+                                        td= field.city
+                                        td= field.state
+                                        td= field.country
+                                        td= field.postal_code
+                                        td= field.tax_id
+                                        td= field.document
+                                        td
+                                            button(class="btn btn-success btn-xs bttn")
+                                                i(class="fa fa-print")  
+                                            button(class="btn btn-primary btn-xs bttn")
+                                                i(class="fa fa-pencil")  
+                                            button(class="btn btn-danger btn-xs")
+                                                i(class="fa fa-trash-o ")  
+include inc/footer
+include inc/scripts

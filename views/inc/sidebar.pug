@@ -1,0 +1,79 @@
+section#container
+	header(class="header black-bg")
+		div(class="sidebar-toggle-box")
+			div(class="fa fa-bars tooltips", data-placement="right", data-original-title="Toggle Navigation")
+				//- logo start
+		a(href="/dashboard", class="logo")
+			b Spinel
+				span House
+				//- logo end
+		div(class="top-menu")
+			ul(class="nav pull-right top-menu")
+				li
+					a(class="logout", href="/logout") Logout
+	aside
+		div(id="sidebar", class="nav-collapse ")
+
+			//- sidebar menu start
+
+			ul(class="sidebar-menu", id="nav-accordion")
+				p(class="centered")
+					a(href="profile.html")
+					img(src="../img/ui-sam.jpg", class="img-circle", width="80")
+				h5(class="centered") Anil Baral
+				li(class="mt")
+					a(class="active", href="javascript:;")
+						i(class="fa fa-dashboard")
+						span Dashboard
+				li(class="sub-menu")
+					a(href="javascript:;")
+						i(class="fa fa-pie-chart")
+						span Sales
+					ul(class="sub")
+						li
+							a(href="javascript:;") Sale Voucher
+						li
+							a(href="javascript:;") Manage Sale Vouchers
+						li
+							a(href="javascript:;") Sale Ledgers
+				li(class="sub-menu " )
+					a(href="javascript:;" class = (param === "purchases"||"purchase_ledger" ? "active" : ''))
+						i(class="fa fa-shopping-cart")
+						span Purchases
+					ul(class="sub")
+						li
+							a(href="purchasevoucher") Create Purchase
+						li
+							a(href="javascript:;") Manage Purchases
+						li
+							a(href="purchase_ledger") Purchase Ledgers
+
+				li(class="sub-menu")
+					a(href="javascript:;")
+						i(class="fa fa-archive")
+						span Inventory
+					ul(class="sub")
+						li
+							a(href="javascript:;") View Inventory Summary
+						li
+							a(href="javascript:;") Inventory Transfers
+						li
+							a(href="javascript:;") Manage Item Groups
+						li
+							a(href="javascript:;") Manage Items
+						li
+							a(href="javascript:;") Mange Inventory Locations
+						li
+							a(href="javascript:;") Gallery Database
+
+				li(class="sub-menu")
+					a(href="javascript:;")
+						i(class="fa fa-line-chart")
+						span Targets
+					ul(class="sub")
+						li
+							a(href="javascript:;") Create Target
+						li
+							a(href="javascript:;") View Target History
+						li
+							a(href="javascript:;") Manage Targets

@@ -3492,3 +3492,41 @@ ul.chat-available-user li a:hover {
 .remem {
     padding-left: 2rem; 
 }
+
+.bttn{
+    margin-right: 0.25rem;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.ta-group{
+    width: 100%;
+    border-radius: 0.5rem;
+    border-color: #ccc;
+    resize: none;
+}
+
+.upload-img{
+    margin-left: 1.75rem;
+}
+thead, .tab-bg{
+    background: #ccc;
+    color: #555;
+}
+
+.tab_td{
+    width: 7.1rem;
+}
+
+thead tr th{
+    text-align: center;
+}
+
+.form-control{
+    padding: 6px 6px !important;
+}

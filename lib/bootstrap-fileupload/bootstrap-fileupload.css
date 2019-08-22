@@ -1,4 +1,5 @@
 .btn-file {
+  margin-top: 0.5rem; 
   position: relative;
   overflow: hidden;
   vertical-align: middle;
